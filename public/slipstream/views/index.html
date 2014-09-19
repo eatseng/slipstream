@@ -1,0 +1,23 @@
+<title>SlipStream</title>
+<navbar></navbar>
+<p>{{message}}</p>
+
+
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active" id="signup" ng-click="signUp($event)"><a href="">Sign Up</a></li>
+  <li id="signin" ng-click="signIn($event)"><a href="">Sign In</a></li>
+</ul>
+
+<form id="signup-form" action="api/upload_file" enctype="multipart/form-data" method="post">
+    <input type="text" name="Email" value="Email">
+	<input type="text" name="Password" value="Password">
+
+    <input type="submit" value="Sign Up" />
+</form>
+
+<form id="signin-form" action="api/upload_file" enctype="multipart/form-data" method="post" style="display:none;">
+    <input type="text" name="Email" value="Email">
+	<input type="text" name="Password" value="Password">
+
+    <input type="submit" value="Sign In" />
+</form>
