@@ -18,7 +18,8 @@
     "karma": "~0.12.21",
     "requirejs": "~2.1.14",
     "karma-requirejs": "~0.2.2",
-    "grunt-cli": "~0.1.13"
+    "grunt-cli": "~0.1.13",
+    "mongodb": "~1.4.18"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

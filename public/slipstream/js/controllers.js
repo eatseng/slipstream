@@ -1,6 +1,7 @@
-angular.module('SlipstreamController', []).controller('SlipstreamCtlr', [
+angular.module('SlipstreamController', ['UserServices']).controller('SlipstreamCtlr', [
   '$scope',
-  function ($scope) {
+  'UserService',
+  function ($scope, UserService) {
     $scope.message = 'HELLO WORLD FROM CONTROLLER';
     $scope.signUp = function (event) {
       angular.element('#signup').addClass('active');
@@ -14,6 +15,16 @@ angular.module('SlipstreamController', []).controller('SlipstreamCtlr', [
       angular.element('#signin').addClass('active');
       angular.element('#signin-form').css('display', 'inline');
       angular.element('#signup-form').css('display', 'None');
+    };
+    $scope.submitSignUp = function () {
+      console.log('signup');
+      console.log($scope.email);
+      UserService.createUser({
+        email: $scope.email,
+        password: $scope.password
+      }, function (callback) {
+        console.log(callback);
+      });
     };
   }
 ]);
